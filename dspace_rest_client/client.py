@@ -157,6 +157,7 @@ class DSpaceClient:
                 return r_json['authenticated']
 
         # Default, return false
+        _logger.error(f'Requestes url:{r.url}; status code:{r.status_code}; text:{r.text}')
         return False
 
     def refresh_token(self):
